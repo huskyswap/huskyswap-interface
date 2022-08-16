@@ -1,9 +1,9 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
+import { ChainId, JSBI, Percent, Token, WETH } from '@huskyswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+export const ROUTER_ADDRESS = '0x1d19494FDD828e8B595b3fB4F4e1c3e3854E4202'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -40,7 +40,11 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
+  [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
+  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
+  [ChainId.DOGECHAIN_MAINNET]: new Token(ChainId.DOGECHAIN_MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
+  [ChainId.DOGECHAIN_TESTNET]: new Token(ChainId.DOGECHAIN_TESTNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -59,7 +63,11 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.ROPSTEN]: [WETH[ChainId.ROPSTEN]],
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
-  [ChainId.KOVAN]: [WETH[ChainId.KOVAN]]
+  [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
+  [ChainId.BSC_MAINNET]: [WETH[ChainId.BSC_MAINNET]],
+  [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]],
+  [ChainId.DOGECHAIN_MAINNET]: [WETH[ChainId.DOGECHAIN_MAINNET]],
+  [ChainId.DOGECHAIN_TESTNET]: [WETH[ChainId.DOGECHAIN_TESTNET]]
 }
 
 // used to construct intermediary pairs for trading

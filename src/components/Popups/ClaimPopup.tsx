@@ -1,4 +1,4 @@
-import { TokenAmount } from '@uniswap/sdk'
+import { TokenAmount } from '@huskyswap/sdk'
 import React, { useEffect } from 'react'
 import { X } from 'react-feather'
 import styled, { keyframes } from 'styled-components'

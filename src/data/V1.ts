@@ -3,7 +3,7 @@ import {
   BigintIsh,
   Currency,
   CurrencyAmount,
-  ETHER,
+  WDOGE,
   JSBI,
   Pair,
   Route,
@@ -12,7 +12,7 @@ import {
   Trade,
   TradeType,
   WETH
-} from '@uniswap/sdk'
+} from '@huskyswap/sdk'
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../hooks'
 import { useAllTokens } from '../hooks/Tokens'
@@ -106,8 +106,8 @@ export function useV1Trade(
   const inputPair = useMockV1Pair(inputCurrency)
   const outputPair = useMockV1Pair(outputCurrency)
 
-  const inputIsETH = inputCurrency === ETHER
-  const outputIsETH = outputCurrency === ETHER
+  const inputIsETH = inputCurrency === WDOGE
+  const outputIsETH = outputCurrency === WDOGE
 
   // construct a direct or through ETH v1 route
   let pairs: Pair[] = []

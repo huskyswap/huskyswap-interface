@@ -1,4 +1,4 @@
-import { ChainId, TokenAmount } from '@uniswap/sdk'
+import { ChainId, TokenAmount } from '@huskyswap/sdk'
 import React, { useMemo } from 'react'
 import { X } from 'react-feather'
 import styled from 'styled-components'
@@ -54,7 +54,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
   const unclaimedUni = useTokenBalance(useMerkleDistributorContract()?.address, uni)
   const circulation: TokenAmount | undefined = useMemo(
     () =>
-      blockTimestamp && uni && chainId === ChainId.MAINNET
+      blockTimestamp && uni && chainId === ChainId.DOGECHAIN_MAINNET
         ? computeUniCirculation(uni, blockTimestamp, unclaimedUni)
         : totalSupply,
     [blockTimestamp, chainId, totalSupply, unclaimedUni, uni]
