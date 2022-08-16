@@ -1,4 +1,4 @@
-import { Currency, WDOGE, Token } from '@huskyswap/sdk'
+import { Currency, ETHER, Token } from '@huskyswap/sdk'
 import React, { KeyboardEvent, RefObject, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ReactGA from 'react-ga'
 import { useTranslation } from 'react-i18next'
@@ -136,7 +136,7 @@ export function CurrencySearch({
       if (e.key === 'Enter') {
         const s = debouncedQuery.toLowerCase().trim()
         if (s === 'eth') {
-          handleCurrencySelect(WDOGE)
+          handleCurrencySelect(ETHER)
         } else if (filteredSortedTokens.length > 0) {
           if (
             filteredSortedTokens[0].symbol?.toLowerCase() === debouncedQuery.trim().toLowerCase() ||

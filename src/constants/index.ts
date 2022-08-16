@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x1d19494FDD828e8B595b3fB4F4e1c3e3854E4202'
+export const ROUTER_ADDRESS = '0x7F876AfA6825B8247145edD22e9c13Cb76e3B5FB'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -41,8 +41,6 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.BSC_MAINNET]: new Token(ChainId.BSC_MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.DOGECHAIN_MAINNET]: new Token(ChainId.DOGECHAIN_MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.DOGECHAIN_TESTNET]: new Token(ChainId.DOGECHAIN_TESTNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
 }
@@ -64,8 +62,6 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.BSC_MAINNET]: [WETH[ChainId.BSC_MAINNET]],
-  [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]],
   [ChainId.DOGECHAIN_MAINNET]: [WETH[ChainId.DOGECHAIN_MAINNET]],
   [ChainId.DOGECHAIN_TESTNET]: [WETH[ChainId.DOGECHAIN_TESTNET]]
 }
@@ -73,7 +69,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC]
+  [ChainId.DOGECHAIN_TESTNET]: [...WETH_ONLY[ChainId.DOGECHAIN_TESTNET], DAI, USDC, USDT, WBTC]
 }
 
 export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
@@ -95,20 +91,20 @@ export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
   [ChainId.MAINNET]: {
-    [AMPL.address]: [DAI, WETH[ChainId.MAINNET]]
+    [AMPL.address]: [DAI, WETH[ChainId.DOGECHAIN_TESTNET]]
   }
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC]
+  [ChainId.DOGECHAIN_TESTNET]: [...WETH_ONLY[ChainId.DOGECHAIN_TESTNET], DAI, USDC, USDT, WBTC]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC]
+  [ChainId.DOGECHAIN_TESTNET]: [...WETH_ONLY[ChainId.DOGECHAIN_TESTNET], DAI, USDC, USDT, WBTC]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {

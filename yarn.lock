@@ -1847,10 +1847,15 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@huskyswap/core@1.0.0", "@huskyswap/core@^1.0.0":
+"@huskyswap/core@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@huskyswap/core/-/core-1.0.0.tgz#f054a7dd79feaa193418b3667a69b219ee57d3ae"
   integrity sha512-OPFpd2jMCpdGNFk4yxQceWTI2pG8dLO7oiIn8DfKyrvi4AtVGI2KaFN4kk4+Kc8PoQTjreQSWR1WSMMvqmORWQ==
+
+"@huskyswap/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@huskyswap/core/-/core-1.0.1.tgz#87598c042400f51a78ad0e556a9bf524c8ace7c4"
+  integrity sha512-5KJSZNVDQpGnir15aE0XKHnJN8aMahwZpF/hZrYU7+O5H2bFefjyw1w9+tsu1WMoYJ120ipRWLZ3eOGYN/RzEQ==
 
 "@huskyswap/lib@1.0.0":
   version "1.0.0"
@@ -1865,12 +1870,12 @@
     "@huskyswap/core" "1.0.0"
     "@huskyswap/lib" "1.0.0"
 
-"@huskyswap/sdk@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@huskyswap/sdk/-/sdk-1.0.1.tgz#a5cc7d9ab1e0d1dec59d1869191dc17f51465a6b"
-  integrity sha512-kCLLZ7ykwnW/0EltcjdwtbzOqDLH6USuld1LtjMfTsjTN0LNDotNXWoKmqkJdnYhgvAHwjrAaX+C4EZ8m+lopw==
+"@huskyswap/sdk@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@huskyswap/sdk/-/sdk-1.1.0.tgz#40152f96be0486349aa5dace1c5afe77685e9fc3"
+  integrity sha512-8KtACriB18VTWtzvTq9iEcp+N9Maw4jaN976Xi2Ub573hBkaqZFSJ2soVbNryDFwVeKH4Nzo19E9j/IpeFGTbw==
   dependencies:
-    "@huskyswap/core" "^1.0.0"
+    "@huskyswap/core" "^1.0.1"
     big.js "^5.2.2"
     decimal.js-light "^2.5.0"
     jsbi "^3.1.1"
@@ -9896,9 +9901,9 @@ js-yaml@^3.13.1:
     esprima "^4.0.0"
 
 jsbi@^3.1.1:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/jsbi/-/jsbi-3.1.3.tgz#f024b340032f7c7caaa6ca4b32b55e8d33f6e897"
-  integrity sha512-nBJqA0C6Qns+ZxurbEoIR56wyjiUszpNy70FHvxO5ervMoCbZVE3z3kxr5nKGhlxr/9MhKTSUBs7cAwwuf3g9w==
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/jsbi/-/jsbi-3.2.5.tgz#b37bb90e0e5c2814c1c2a1bcd8c729888a2e37d6"
+  integrity sha512-aBE4n43IPvjaddScbvWRA2YlTzKEynHzu7MqOyTipdHucf/VxS63ViCjxYRg86M8Rxwbt/GfzHl1kKERkt45fQ==
 
 jsbn@~0.1.0:
   version "0.1.1"

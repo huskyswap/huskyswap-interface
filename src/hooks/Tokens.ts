@@ -1,6 +1,6 @@
 import { TokenAddressMap, useDefaultTokenList, useUnsupportedTokenList } from './../state/lists/hooks'
 import { parseBytes32String } from '@ethersproject/strings'
-import { Currency, WDOGE, Token, currencyEquals } from '@huskyswap/sdk'
+import { Currency, ETHER, Token, currencyEquals } from '@huskyswap/sdk'
 import { useMemo } from 'react'
 import { useCombinedActiveList, useCombinedInactiveList } from '../state/lists/hooks'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
@@ -182,7 +182,7 @@ export function useToken(tokenAddress?: string): Token | undefined | null {
 }
 
 export function useCurrency(currencyId: string | undefined): Currency | null | undefined {
-  const isETH = currencyId?.toUpperCase() === 'ETH'
+  const isETH = currencyId?.toUpperCase() === 'WDOGE'
   const token = useToken(isETH ? undefined : currencyId)
-  return isETH ? WDOGE : token
+  return isETH ? ETHER : token
 }

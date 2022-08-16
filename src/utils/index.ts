@@ -23,10 +23,8 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   4: 'rinkeby.',
   5: 'goerli.',
   42: 'kovan.',
-  56: 'bnbmain.',
-  97: 'bnbtest.',
-  2000: 'dogechainmain.',
-  568: 'dogechaintest.'
+  2000: 'explorer.',
+  568: 'explorer-testnet.'
 }
 
 export function getEtherscanLink(
@@ -34,7 +32,7 @@ export function getEtherscanLink(
   data: string,
   type: 'transaction' | 'token' | 'address' | 'block'
 ): string {
-  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}dogechain.dog`
 
   switch (type) {
     case 'transaction': {

@@ -3,7 +3,7 @@ import {
   BigintIsh,
   Currency,
   CurrencyAmount,
-  WDOGE,
+  ETHER,
   JSBI,
   Pair,
   Route,
@@ -106,8 +106,8 @@ export function useV1Trade(
   const inputPair = useMockV1Pair(inputCurrency)
   const outputPair = useMockV1Pair(outputCurrency)
 
-  const inputIsETH = inputCurrency === WDOGE
-  const outputIsETH = outputCurrency === WDOGE
+  const inputIsETH = inputCurrency === ETHER
+  const outputIsETH = outputCurrency === ETHER
 
   // construct a direct or through ETH v1 route
   let pairs: Pair[] = []

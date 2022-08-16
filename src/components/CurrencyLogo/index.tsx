@@ -1,4 +1,4 @@
-import { Currency, WDOGE, Token } from '@huskyswap/sdk'
+import { Currency, ETHER, Token } from '@huskyswap/sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
@@ -38,7 +38,7 @@ export default function CurrencyLogo({
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
 
   const srcs: string[] = useMemo(() => {
-    if (currency === WDOGE) return []
+    if (currency === ETHER) return []
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
@@ -49,7 +49,7 @@ export default function CurrencyLogo({
     return []
   }, [currency, uriLocations])
 
-  if (currency === WDOGE) {
+  if (currency === ETHER) {
     return <StyledEthereumLogo src={DogechainLogo} size={size} style={style} />
   }
 

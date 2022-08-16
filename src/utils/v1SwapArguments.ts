@@ -1,5 +1,5 @@
 import { MaxUint256 } from '@ethersproject/constants'
-import { CurrencyAmount, WDOGE, SwapParameters, Token, Trade, TradeOptionsDeadline, TradeType } from '@huskyswap/sdk'
+import { CurrencyAmount, ETHER, SwapParameters, Token, Trade, TradeOptionsDeadline, TradeType } from '@huskyswap/sdk'
 import { getTradeVersion } from '../data/V1'
 import { Version } from '../hooks/useToggledVersion'
 
@@ -23,9 +23,9 @@ export default function v1SwapArguments(
     throw new Error('too many pairs')
   }
   const isExactIn = trade.tradeType === TradeType.EXACT_INPUT
-  const inputETH = trade.inputAmount.currency === WDOGE
-  const outputETH = trade.outputAmount.currency === WDOGE
-  if (inputETH && outputETH) throw new Error('ETHER to ETHER')
+  const inputETH = trade.inputAmount.currency === ETHER
+  const outputETH = trade.outputAmount.currency === ETHER
+  if (inputETH && outputETH) throw new Error('WDOGE to WDOGE')
   const minimumAmountOut = toHex(trade.minimumAmountOut(options.allowedSlippage))
   const maximumAmountIn = toHex(trade.maximumAmountIn(options.allowedSlippage))
   const deadline = `0x${options.deadline.toString(16)}`
